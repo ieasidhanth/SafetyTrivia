@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4A738AA-5AE2-4F76-8CDA-D4F46511D56D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quizzed</RootNamespace>
+    <AssemblyName>Quizzed</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib.Barcode.WinForms, Version=5.0.0.50227, Culture=neutral, PublicKeyToken=ef1bae04ecfd0461, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\BarcodeLib_WinFormsBarcode_Trial\BarcodeLib_WinFormsBarcode_Trial\BarcodeLib.Barcode.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="OnBarcode.Barcode.WinForms">
+      <HintPath>..\..\..\..\..\Downloads\OnBarcode.BarcodeGenerator.WinForms\OnBarcode.Barcode.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2017.1.117.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2017.1.117.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="DataStoreRefresh.cs" />
+    <Compile Include="DSL _offline.cs" />
+    <Compile Include="DSL.cs" />
+    <Compile Include="Loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loader.Designer.cs">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignupPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignupPage.Designer.cs">
+      <DependentUpon>SignupPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Upload_results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upload_results.Designer.cs">
+      <DependentUpon>Upload_results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_offline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_offline.Designer.cs">
+      <DependentUpon>Login_offline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogWriter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quiz.Designer.cs">
+      <DependentUpon>Quiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuizzedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuizzedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz_RC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quiz_RC.Designer.cs">
+      <DependentUpon>Quiz_RC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Upload_RC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upload_RC.Designer.cs">
+      <DependentUpon>Upload_RC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upload.Designer.cs">
+      <DependentUpon>Upload.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Loader.resx">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignupPage.resx">
+      <DependentUpon>SignupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Upload_results.resx">
+      <DependentUpon>Upload_results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_offline.resx">
+      <DependentUpon>Login_offline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Quiz.resx">
+      <DependentUpon>Quiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quiz_RC.es.resx">
+      <DependentUpon>Quiz_RC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quiz_RC.resx">
+      <DependentUpon>Quiz_RC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Upload_RC.resx">
+      <DependentUpon>Upload_RC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Upload.resx">
+      <DependentUpon>Upload.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuizzedDataSet.xsc">
+      <DependentUpon>QuizzedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuizzedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuizzedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuizzedDataSet.xss">
+      <DependentUpon>QuizzedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Quizzed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hourglass.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hourglass %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quizzed %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quizzed %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\Logo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IEA__0005_Corporate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_new.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IEA_Logo_promotional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suc.bmp" />
+    <None Include="Resources\if_Tick_Mark_Circle_1398913.png" />
+    <None Include="Resources\Spinner.gif" />
+    <None Include="Resources\Spinner %281%29.gif" />
+    <None Include="Resources\Spinner %281%291.gif" />
+    <None Include="Resources\Spinner %282%29.gif" />
+    <None Include="Resources\Spinner %282%291.gif" />
+    <None Include="Resources\Spinner %283%29.gif" />
+    <None Include="Resources\if_magnifying-glass_226571.png" />
+    <None Include="Resources\if_search-70px_510861.png" />
+    <None Include="Resources\if_search-70px_510861 %281%29.png" />
+    <None Include="Resources\Spinner %284%29.gif" />
+    <None Include="Resources\ajax-loader.gif" />
+    <None Include="Resources\Rolling.gif" />
+    <None Include="Resources\Rolling1.gif" />
+    <None Include="Resources\if_waiting_36585.png" />
+    <None Include="Resources\if_Clock - Time_11035.png" />
+    <None Include="Resources\if_Clock_728924.png" />
+    <None Include="Resources\if_Clock_728924 %281%29.png" />
+    <Content Include="Resources\success.png" />
+    <None Include="Resources\if_23_Play_106223.png" />
+    <None Include="Resources\if_54_111138.png" />
+    <None Include="Resources\if_cloud-upload_322433 %281%29.png" />
+    <Content Include="Resources\if_cloud-upload_322433.ico" />
+    <None Include="Resources\if_sync_126579.png" />
+    <None Include="Resources\if_cloud-upload_322433.png" />
+    <None Include="Resources\if_sync_126579 %281%29.png" />
+    <None Include="Resources\if_icon-person_211874.png" />
+    <None Include="Resources\if_icon-person_211874 %281%29.png" />
+    <None Include="Resources\if_file_309072.png" />
+    <Content Include="Resources\if_sync_126579.ico" />
+    <None Include="Resources\if_sync_1265791.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

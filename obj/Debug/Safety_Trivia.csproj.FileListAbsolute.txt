@@ -1,0 +1,9 @@
+C:\Users\ssharma\documents\visual studio 2015\Projects\Quizzed\Quizzed\obj\Debug\Quizzed.Login.resources
+C:\Users\ssharma\documents\visual studio 2015\Projects\Quizzed\Quizzed\obj\Debug\Safety_Trivia.Properties.Resources.resources
+C:\Users\ssharma\documents\visual studio 2015\Projects\Quizzed\Quizzed\obj\Debug\Quizzed.Quiz.resources
+C:\Users\ssharma\documents\visual studio 2015\Projects\Quizzed\Quizzed\obj\Debug\Quizzed.Quiz_RC.resources
+C:\Users\ssharma\documents\visual studio 2015\Projects\Quizzed\Quizzed\obj\Debug\Quizzed.SplashForm.resources
+C:\Users\ssharma\documents\visual studio 2015\Projects\Quizzed\Quizzed\obj\Debug\Quizzed.Upload_RC.resources
+C:\Users\ssharma\documents\visual studio 2015\Projects\Quizzed\Quizzed\obj\Debug\Quizzed.Upload.resources
+C:\Users\ssharma\documents\visual studio 2015\Projects\Quizzed\Quizzed\obj\Debug\Safety_Trivia.csproj.GenerateResource.Cache
+C:\Users\ssharma\documents\visual studio 2015\Projects\Quizzed\Quizzed\obj\Debug\Safety_Trivia.exe.licenses
